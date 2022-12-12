@@ -36,7 +36,7 @@ public class Main {
             //////////////////GET GAMBLING AMOUNT////////////////
             System.out.println(askForGamblingAmount);
             gambledPoints = sc.nextDouble();
-            while (gambledPoints > totalPoints && gambledPoints <= 0) {
+            while (gambledPoints > totalPoints) {
                 System.out.println(gamblingAmountError);
                 gambledPoints = sc.nextDouble();
             }
