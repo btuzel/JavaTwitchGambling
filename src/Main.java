@@ -11,6 +11,8 @@ public class Main {
         //////////CREATE LISTS AND MAPS//////////////
         List<User> gamblersList = new ArrayList<>();
         List<Double> gamblerPointsList = new ArrayList<>();
+        List<User> usersThatSaidNo;
+        List<User> usersThatSaidYes;
         HashMap<User, Double> map = new HashMap<>();
 
         ///GET USER INPUT///
@@ -64,11 +66,11 @@ public class Main {
         }
 
         /////////////GET USERS THAT SAID NO///////////////
-        List<User> usersThatSaidNo = gamblersList.stream()
+        usersThatSaidNo = gamblersList.stream()
                 .filter(user -> user.getOutcomeThatWasBetOn() == Outcome.NO).toList();
 
         ////////////GET USERS THAT SAID YES///////////////
-        List<User> usersThatSaidYes = gamblersList.stream()
+        usersThatSaidYes = gamblersList.stream()
                 .filter(p -> p.getOutcomeThatWasBetOn() == Outcome.YES).toList();
 
         ////////////CREATE ITERATORS TO GO OVER 2 LISTS AT THE SAME TIME/////////////
